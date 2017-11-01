@@ -1,0 +1,348 @@
+												ANIMATIONS 
+
+
+
+
+==========================================TRANSFORMS
+
+DEFINITION: Transforms just transform your web elements in all kinds of weird and cool ways.
+
+USES: Stretch elements, change the coordinates of an element, skew an element, or rotate it. 
+
+
+
+
+---------------LIST OF TRANSFORM VALUES:
+
+NONE:	
+Defines that there should be no transformation	Play it »
+MY EXPLANATION: Nothing Happens 
+
+MATRIX 
+(n,n,n,n,n,n)	Defines a 2D transformation, using a matrix of six values	Play it »
+MY EXPLANATION: ROTATES, FLIPS, AND REPOSITIONS AN ELEMENT
+	SYNTAX: matrix(0.866,0.5,-0.6,0.866,0,0)
+
+MATRIX 3D
+(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)	Defines a 3D transformation, using a 4x4 matrix of 16 values
+MY EXPLANATION: ?
+	SYNTAX:
+
+TRANSLATE(x,y)	Defines a 2D translation	Play it »
+MY EXPLANATION: Moves an item vertically or horizontally.
+	SYNTAX: transform: translate(200px, 400px)
+
+TRANSLATE 3D(x,y,z)	Defines a 3D translation	
+MY EXPLANATION: ?
+	SYNTAX:
+
+TRANSLATE X(x)	Defines a translation, using only the value for the X-axis	Play it »
+MY EXPLANATION: Moves an element horizontally
+	SYNTAX: transform: translateX(200px)
+
+TRANSLATE Y(y)	Defines a translation, using only the value for the Y-axis	Play it »
+MY EXPLANATION: Moves an element Vertically
+	SYNTAX: transform: translateY(400px)
+
+TRANSLATE Z(z)	Defines a 3D translation, using only the value for the Z-axis	
+MY EXPLANATION: ?
+	SYNTAX:
+
+SCALE(x,y)	Defines a 2D scale transformation	Play it »
+MY EXPLANATION: Makes an element wider, or taller based on the X or Y axis
+	SYNTAX: scale(2, 4)
+
+SCALE 3D(x,y,z)	Defines a 3D scale transformation	
+MY EXPLANATION: ?
+	SYNTAX:
+
+SCALE X(x)	Defines a scale transformation by giving a value for the X-axis	Play it »
+MY EXPLANATION: Makes an element Wider thinner based on positive or negative values 
+	SYNTAX: transform: scaleX(3)
+
+SCALE Y(y)	Defines a scale transformation by giving a value for the Y-axis	Play it »
+MY EXPLANATION: Makes an element taller or shorter based on positive or negative values
+	SYNTAX: transform: scaleY(2)
+
+SCALE Z(z)	Defines a 3D scale transformation by giving a value for the Z-axis	
+MY EXPLANATION: ?
+	SYNTAX:
+
+ROTATE (angle)	Defines a 2D rotation, the angle is specified in the parameter	Play it »
+MY EXPLANATION: Rotates an element clockwise based on degrees
+	SYNTAX: transform: rotate(20deg)
+
+ROTATE 3D(x,y,z,angle)	Defines a 3D rotation	
+MY EXPLANATION: ?
+	SYNTAX:
+
+ROTATE X(angle)	Defines a 3D rotation along the X-axis	Play it »
+MY EXPLANATION: Flips an item upside down, and back to it's original position horizontally, based on degrees
+	SYNTAX: transform: rotateX(50deg)
+
+ROTATE Y(angle)	Defines a 3D rotation along the Y-axis	Play it »
+MY EXPLANATION: Flips an item vertically and back to its original position based on degrees
+	SYNTAX: transform: rotateY(160deg)
+
+ROTATE Z(angle)	Defines a 3D rotation along the Z-axis	Play it »
+MY EXPLANATION: ?
+	SYNTAX:
+
+SKEW (x-angle,y-angle)	Defines a 2D skew transformation along the X- and the Y-axis	Play it »
+MY EXPLANATION: This one is super weird. It seems to rotate using the top right hand corner as the base, and brings the bottom left corner around it and back, but it gets larger and back to it's original size as it reaches it's original destination. 
+	SYNTAX:
+
+SKEW X(angle)	Defines a 2D skew transformation along the X-axis	Play it »
+MY EXPLANATION: It rotates vetically similar to the rotateX property, exept that it turns diamond shape, and enlarges as it does so, and then it turns back to rectangle, and shrinks back to it's original size as it comes back to place. 
+	SYNTAX:
+
+skewY(angle)	Defines a 2D skew transformation along the Y-axis	Play it »
+MY EXPLANATION:
+	SYNTAX:
+
+perspective(n)	Defines a perspective view for a 3D transformed element	
+MY EXPLANATION: t rotates horizontally similar to the rotateY property, exept that it turns diamond shape, and enlarges as it does so, and then it turns back to rectangle, and shrinks back to it's original size as it comes back to place. 
+	SYNTAX:
+
+initial	Sets this property to its default value. Read about initial	
+MY EXPLANATION:
+	SYNTAX:
+
+inherit	Inherits this property from its parent element. Read about inherit	
+MY EXPLANATION:
+	SYNTAX:
+
+
+
+
+---------------LIST OF TRANSFORM TYPES:
+
+TRANSFORM ORIGIN:
+
+	DEFINITION:
+	The transform-origin property allows you to change the position of transformed elements.
+
+	2D transformations can change the x- and y-axis of an element. 3D transformations can also change the z-axis of an element.
+
+	To better understand the transform-origin property, view a demo.
+
+	Note: This property must be used together with the transform property.
+
+	Tip: To better understand this property for 3D transforms, view a demo.
+
+	SYNTAX EXAMPLE:
+
+TRANSFORM STYLE:
+	DEFINITION:
+	The transform-style property specifies how nested elements are rendered in 3D space.
+
+	Note: This property must be used together with the transform property.
+
+	To better understand the transform-style property, view a demo.
+
+
+	SYNTAX EXAMPLE:
+
+
+
+---------------------DISCOVERIES:
+
+-You can only use one transform per CSS element. If you try to add another one, it'll do what the last one said. In this example below, it'll scale the item, but it's not going to move it at all. 
+	EXAMPLE:
+		img{
+		transform: translate(200px, 399px)
+		transform: scaleX(4)
+		}
+
+-You can use multiple transform values within one CSS element, but you have to include them all in the transform section, and they build on top of each other.
+	EXAMPLE:
+	transform: scale(2, 3) rotateZ(-20deg) translateY(200px)
+
+
+
+
+
+==========================================TRANSITIONS
+
+DEFINITION: The most simple way to do some kind of animation on a page. They transition an element from one state to another, in a certain set amount of time.
+
+USES: For example, you can create a button, and use the :hover property to give it other values when people hover over this button. The transition property can transform the button smoothly instead of doing it abruptly.
+
+SYNTAX EXAMPLE: transition: 1s;
+
+APPLICATION: So you use these transitions for example when you have a hover element, so that the effects you give it can fade into each other smoothly. 
+	EXAMPLE:
+
+	div.circle{
+	background: pink;
+	width: 100px;
+	padding: 50px 0;
+	line-height: 0;
+	margin: 60px auto;
+	color: blue;
+	border-radius: 50px;
+	cursor:pointer;
+	transition: 7s;
+	}
+
+
+	div.circle:hover{
+		background: salmon;
+		color: black;
+		transform: rotate(360deg);
+
+	}
+
+YOU CAN ALSO SPECIFY WHICH ASPECTS OF THE ELEMENT YOU WANT A SPECIFIC TRANSITION TO APPLY TO
+	EXAMPLE:
+
+		div.circle{
+			background: pink;
+			width: 100px;
+			padding: 50px 0;
+			line-height: 0;
+			margin: 60px auto;
+			color: blue;
+			border-radius: 50px;
+			cursor:pointer;
+			transition: background 7s, transform 4s;
+		}
+
+
+		div.circle:hover{
+			background: salmon;
+			color: black;
+			transform: rotate(360deg);
+
+		}
+
+YOU CAN ALSO ADD A DELAY TO A TRANSITION, BY ADDING THE SECONDS RIGHT NEXT TO THE SPECIFIED DURATION SECONDS.
+	EXAMPLE: 
+
+		div.circle{
+			background: pink;
+			width: 100px;
+			padding: 50px 0;
+			line-height: 0;
+			margin: 60px auto;
+			color: blue;
+			border-radius: 50px;
+			cursor:pointer;
+			transition: background 7s, transform 4s 7s;
+		}
+
+
+		div.circle:hover{
+			background: salmon;
+			color: black;
+			transform: rotate(360deg);
+
+		}
+
+PARAMETER NUMBER 3, LINEAR, EASE-IN AND EASE-OUT:
+	This 3 parameter combo basically manipulates how the timing happens. and you call it by using
+	transition-timing-function: ease-in;
+	LINEAR: Is the default parameter, and this basically says that the way the element times is normal
+	EASE-IN: This parameter starts out slow but then it speeds up
+	EASE-OUT: This parameter starts out fast and then it slows down towards the end.
+
+		EXAMPLE:
+
+		div.circle{
+			background: pink;
+			width: 100px;
+			padding: 50px 0;
+			line-height: 0;
+			margin: 60px auto;
+			color: blue;
+			border-radius: 50px;
+			cursor:pointer;
+			transition: background 7s, transform 4s 7s ease-in;
+		}
+
+
+		div.circle:hover{
+			background: salmon;
+			color: black;
+			transform: rotate(360deg);
+
+		}
+	
+
+========================================KEYFRAMES:
+
+DEFINITION: They're basically the powerhouse of CSS animations. They're where we define our animations and tell CSS how we want the animation to work. Which properties we're going to change, and where, and how exactly we're going to do it. 
+
+HOW IT WORKS: We use a different keyframe block for  every type of animation that we use on the page. 
+
+SYNTAX-EXAMPLE: 
+	img.luigi{
+		position:absolute;
+		left:0;
+		animation-name: race;
+		animation-duration: 6s;
+		transition-timing-function: ease-in;
+	}
+
+	@keyframes race{
+		from{transform: translate(0)}
+		to{transform: translate(800px)}
+	}
+
+
+
+====================================ANIMATION FILL MODE:
+
+DEFINITION: This property tells CSS what to do with the animated element after the animation is over. It can take 4 values.
+
+4 VALUES: None, forwards, backwards, and both
+	NONE: Default. do nothing with it. 
+	FORWARDS: The element stays where it ended up at the end of the animation
+	BACKWARDS: This one says "Whatever the starting point of the animation is, I want you to apply that to the element before the animation kicks in."
+
+SYNTAX:
+
+
+
+-----ANIMATION DELAY:
+
+DEFINITION: Delays the start of the animation for the specified amount of time. 
+
+SYNTAX: animation-delay: 6s;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

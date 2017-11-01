@@ -1,0 +1,52 @@
+
+div.a, div.b, div.c, div.d{
+	margin-top: 10px;
+}
+
+body{
+	background: #1E1E1E;
+}
+
+
+
+img.lake{
+animation-name:left;
+animation-duration: 5s;
+}
+
+
+img.mystic{
+	animation-name: right;
+	animation-duration: 5s;
+}
+
+
+img.palms{
+	animation-name: left;
+	animation-duration: 5s;
+}
+
+
+img.road{
+	animation-name: right;
+	animation-duration: 5s;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes left{
+	from{transform: translate(0)}
+	to{transform: translate(2000px)}
+}
+
+@keyframes right{
+	from{transform: translate(2000px)}
+	to{ transform: translate(0) }
+}
