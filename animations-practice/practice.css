@@ -283,9 +283,13 @@ ul li.footer-li{
 
 
 
+/*
+*/
+
+/*---------- COMMENT -----------*/
 
 
-
+/*---------- PAGE BREAK MID -----------*/
 
 
 @media (max-width: 755px){
@@ -383,14 +387,22 @@ ul li.footer-li{
 
 
 
+/*---------- PAGE BREAK MID-LOW -----------*/
 
 
-
-@media (min-width: 756px) and (max-width: 1113px){
+@media (min-width: 853px) and (max-width: 1113px){
 	body{
 		background: black;
 	}
 
+	header.header-main{
+	border-bottom: 3px solid orange;
+	font-size: 13px;
+	text-align: right;
+	padding: 30px;
+	color: orange;
+	width: 100%;
+	}
 	
 	h1{
 	margin-left: 10px;
@@ -415,27 +427,29 @@ ul li.footer-li{
 	}
 
 	div.list-container{
-	float:right;
-	//max-width: 700px;
+
+	max-width: 700px;
 	max-height: 100px;
 	background: #0C180E;
 	margin-top: 20px;
 	margin-bottom: auto;
 	margin-left: auto;
-	margin-right: 60px;
+	margin-right: 160px;
 	position: relative;
 	bottom: 10px;
+	
+
 	
 	}
 
 	li.nav-list{
-	display:block;
-	width:250px;
+	display: block;
+	width: 250px;
 	height: 20px;
 	margin: 2px 2px;
 	border: 3px solid orange;
-	text-align: center;
 	cursor: pointer;
+	
 	}
 
 
@@ -443,8 +457,14 @@ ul li.footer-li{
 
 
 
+/*---------- PAGE BREAK LOW -----------*/
 
 
+@media (min-width: 380px) and (max-width: 852px){
+
+
+
+}
 
 
 
